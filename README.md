@@ -2,45 +2,28 @@
 
 
 
-### Data Analysis Using SQL
+Project Overview
 
-1. Show all customer records
+AtliQ Hardwares, a computer hardware business, faced challenges in scaling revenue in a competitive market. The sales director required real-time sales insights to inform strategic decisions.
 
-    `SELECT * FROM customers;`
+Objective
 
-1. Show total number of customers
+Develop a dashboard for analyzing revenue growth, year-over-year (YOY) trends, and region-wise sales performance.
 
-    `SELECT count(*) FROM customers;`
 
-1. Show transactions for Chennai market (market code for chennai is Mark001 )
+Key Features
+     Displayed revenue growth and YOY trends.
+     Analyzed region-wise sales performance.
+     Provided actionable insights to the sales director.
 
-    `SELECT * FROM transactions where market_code='Mark001';`
+Technologies Used
+      Tools: SQL, Power BI
+      Skills: Data Analysis, Business Intelligence, Dashboarding
 
-1. Show distrinct product codes that were sold in chennai
 
-    `SELECT distinct product_code FROM transactions where market_code='Mark001';`
+Outcome
 
-1. Show transactions where currency is US dollars
-
-    `SELECT * from transactions where currency="USD"`
-
-1. Show transactions in 2020 join by date table
-
-    `SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020;`
-
-1. Show total revenue in year 2020,
-
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.currency="INR\r" or transactions.currency="USD\r";`
-	
-1. Show total revenue in year 2020, January Month,
-
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");`
-
-1. Show total revenue in year 2020 in Chennai
-
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020
-and transactions.market_code="Mark001";`
-
+The insights provided by the dashboard enabled quick, data-informed decisions, potentially increasing revenue by 7% in the next quarter.      
 
 
 
